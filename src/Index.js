@@ -20,14 +20,14 @@ export class Index extends Component {
     };
   }
 
-  componentWillMount() {
-    const { comeInOnNext = defaultInOnNext } = this.props;
-    this.setState({ action: comeInOnNext });
-  }
+//   componentWillMount() {
+//     const { comeInOnNext = defaultInOnNext } = this.props;
+//     this.setState({ action: comeInOnNext });
+//   }
 
   componentDidMount() {
-    const { steps = 0 } = this.props;
-    this.setState({ totalSteps: steps.length - 1 });
+    const { comeInOnNext = defaultInOnNext, steps = 0 } = this.props;
+    this.setState({ action: comeInOnNext, totalSteps: steps.length - 1 });
   }
 
   next = () => {
